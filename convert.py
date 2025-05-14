@@ -37,7 +37,7 @@ def hex_to_rgb(hex):
 
 for line in sys.stdin:
     modified_line = re.sub(
-        r"#(?:[0-9a-fA-F]{3}|[0-9a-fA-F]{4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})\b",
+        r"\#([0-9a-fA-F]+)",
         lambda match: hex_to_rgb(match.group()),
         line,
     )
