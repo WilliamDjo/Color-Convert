@@ -11,7 +11,7 @@ def hex_to_decimal(c):
 def hex_pair_to_decimal(pair):
     first = hex_to_decimal(pair[0])
     second = hex_to_decimal(pair[1])
-    return first * 16 + second
+    return (first << 4) + second  # can also use (first * 16) + second
 
 
 def hex_to_rgb(hex):
